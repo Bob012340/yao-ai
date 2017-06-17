@@ -12,7 +12,7 @@ from keras.layers import Masking
 
 
 sentence_length = 40
-dataX, dataY, story, word_to_int, int_to_word = yaoai.setup(sentence_length)
+dataX, dataY, story, word_to_int, int_to_word = yaoai.setup(sentence_length, './input.txt')
 
 model = Sequential([
     Masking(mask_value=0.0, input_shape=(dataX.shape[1:])),
