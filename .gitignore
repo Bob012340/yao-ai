@@ -1,5 +1,14 @@
 # Training data
 input.txt
 
+# Output sentence
+output.txt
+
+# Model weights
+model.hdf5
+
 # PyCharm data
 .idea
+
+# Something
+__pycache__/
