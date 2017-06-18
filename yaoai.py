@@ -70,8 +70,8 @@ def encode(input_data, sentence_length, dictionary):
     return dataX, dataY
 
 
-def setup(sentence_length):
-    story_raw, int_to_word, word_to_int = read_input('./input.txt')
+def setup(sentence_length, input_file_path):
+    story_raw, int_to_word, word_to_int = read_input(input_file_path)
     story = generate_story(story_raw, sentence_length)
     dataX, dataY = encode(story, sentence_length, word_to_int)
 
