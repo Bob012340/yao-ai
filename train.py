@@ -33,7 +33,7 @@ def main(argv):
     checkpoint = ModelCheckpoint(file_path, monitor='loss', verbose=1, save_best_only=True, mode='min')
     callbacks_list = [checkpoint]
 
-    model.fit(dataX, dataY, epochs=80, batch_size=sentence_length, callbacks=callbacks_list)
+    model.fit(dataX, dataY, epochs=200, batch_size=sentence_length, callbacks=callbacks_list)
 
     file_path = 'model.hdf5'
     model.save(file_path)
