@@ -54,7 +54,7 @@ def encode(input_data, sentence_length, dictionary):
         data = []
         for word_index, word in enumerate(sentence):
             if word != 0:
-                data.append([dictionary[word]])
+                data.append([(dictionary[word]/len(dictionary))])
             else:
                 data.append([word])
         dataX[sentence_index] = data[:-1]

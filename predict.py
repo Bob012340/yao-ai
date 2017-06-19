@@ -20,6 +20,8 @@ def main():
         Dropout(0.2),
         LSTM(256, return_sequences=True),
         Dropout(0.2),
+        LSTM(256, return_sequences=True),
+        Dropout(0.2),
         Dense(dataY.shape[2], activation='softmax'),
     ])
     model.load_weights('./model.hdf5')
